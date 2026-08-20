@@ -1,0 +1,52 @@
+name: Build Umniah VPN APK
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "app/**"
+      - "config/**"
+      - ".github/workflows/build-umniah-vpn.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout app
+        uses: actions/checkout@v4
+
+      - name: Download libXray artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p app/libs
+          gh run download 32353089934 \
+            --repo fadixd1/UmniahVPN \
+            --name libxray-android \
+            --dir /tmp/libxray
+          find /tmp/libxray -type f -maxdepth 2 -print
+          cp /tmp/libxray/libXray.aar app/libs/libXray.aar
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Setup Android
+        uses: android-actions/setup-android@v3
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Build APK
+        run: |
+          chmod +x gradlew
+          ./gradlew :app:assembleDebug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: Umniah-VPN-debug
+          path: app/build/outputs/apk/debug/app-debug.apk

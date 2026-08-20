@@ -1,0 +1,7 @@
+#Thu Aug 20 09:10:50 GMT 2026
+base.0=/data/data/com.termux/files/home/UmniahVPN/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.1=/data/data/com.termux/files/home/UmniahVPN/app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex
+path.0=0/classes.dex
+path.1=3/classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex

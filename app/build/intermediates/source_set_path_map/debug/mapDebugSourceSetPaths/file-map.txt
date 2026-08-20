@@ -1,0 +1,7 @@
+com.umniah.vpn.app-pngs-0 /data/data/com.termux/files/home/UmniahVPN/app/build/generated/res/pngs/debug
+com.umniah.vpn.app-resValues-1 /data/data/com.termux/files/home/UmniahVPN/app/build/generated/res/resValues/debug
+com.umniah.vpn.app-packageDebugResources-2 /data/data/com.termux/files/home/UmniahVPN/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.umniah.vpn.app-packageDebugResources-3 /data/data/com.termux/files/home/UmniahVPN/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.umniah.vpn.app-debug-4 /data/data/com.termux/files/home/UmniahVPN/app/build/intermediates/merged_res/debug/mergeDebugResources
+com.umniah.vpn.app-debug-5 /data/data/com.termux/files/home/UmniahVPN/app/src/debug/res
+com.umniah.vpn.app-main-6 /data/data/com.termux/files/home/UmniahVPN/app/src/main/res
