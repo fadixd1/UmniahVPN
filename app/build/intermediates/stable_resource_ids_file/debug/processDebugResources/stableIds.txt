@@ -1,2 +1,0 @@
-com.umniah.vpn:style/AppTheme = 0x7f020000
-com.umniah.vpn:drawable/ic_umniah = 0x7f010000
